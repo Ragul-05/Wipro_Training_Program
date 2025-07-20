@@ -18,35 +18,30 @@ public class MinMaxElementKey {
         int[] result = minmaxElement(ele);
         int sumOfMin = result[0];
         int sumOfMax = result[1];
-        int key = sumOfMax - sumOfMin;
+        int diff = sumOfMax - sumOfMin;
 
         System.out.println("Sum of Max digits: " + sumOfMax);
         System.out.println("Sum of Min digits: " + sumOfMin);
-        System.out.println("Key = " + key);
+        System.out.println("Difference = " + diff);
         
         sc.close();
     }
-
     static int[] minmaxElement(int[] arr){
         int sumOfMin = 0;
         int sumOfMax = 0;
-
         for(int num : arr){
             int key = Math.abs(num);
             int min = 9;
             int max = 0;
-
             while(key > 0){
                 int digit = key % 10;
                 min = Math.min(min, digit);
                 max = Math.max(max, digit);
                 key /= 10;
             }
-
             sumOfMin += min;
             sumOfMax += max;
         }
-
         return new int[]{sumOfMin, sumOfMax};
     }
 }
