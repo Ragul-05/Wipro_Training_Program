@@ -1,6 +1,6 @@
 package MileStone_1;
 public class KeyValueDigits1 {
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         int input1 = 5243, input2 = 2376, input3 = 2912;
 
         int t1 = input1 / 1000, t2 = input2 / 1000, t3 = input3 / 1000;
@@ -15,5 +15,19 @@ public class KeyValueDigits1 {
 
         int key = thousands * 1000 + hundreds * 100 + tens * 10 + units;
         System.out.println("Key Value: " + key);  
+    }*/
+
+    public static void main(String[] args) {
+        String[] inputs = {"5243", "2376", "2912"};
+        int[] lonKey = new int[inputs.length+1];
+        for(String num : inputs){
+            for(int i = 0; i< lonKey.length; i++){
+                lonKey[i] = Math.max(lonKey[i], num.charAt(i) - '0');
+            }
+        }
+        for(int i = 0; i < lonKey.length; i++){
+            System.out.print(lonKey[i]);
+        }
+        System.out.println();
     }
 }
