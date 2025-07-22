@@ -1,7 +1,7 @@
 package MileStone_1;
 
 public class CyperText {
-    /*public static void main(String[] args) {
+    public static void main(String[] args) {
         String normalText = "cypertext";
         int size = normalText.length();
         String cyperText = convertNormalToCyperText(normalText,size);
@@ -22,6 +22,6 @@ public class CyperText {
             }
         }
         return updatedText.toString();
-    }*/
+    }
 
 }
